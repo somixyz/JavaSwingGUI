@@ -24,7 +24,7 @@ import javax.swing.event.DocumentListener;
  */
 public class TextFieldEvent {
 
-    JFrame frame = new JFrame("JTEXT");
+    JFrame frame = new JFrame("JTEXTFIELD EVENT");
     JPanel panel = new JPanel();
     JButton button = new JButton("OK");
     JTextField textField = new JTextField("", 20);
