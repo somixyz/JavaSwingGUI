@@ -9,6 +9,8 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.SwingUtilities;
 import net.miginfocom.swing.MigLayout;
@@ -29,15 +31,19 @@ public class MIGLayout {
     
     JButton btnCreate = new JButton("CREATE");
     JButton btnDelete = new JButton("DELETE");
-
+    
+    JLabel lblDsc = new JLabel("Description");
+    JTextArea txtArea = new JTextArea(10, 10);
     public MIGLayout() {
         panel.setLayout(new MigLayout());
         panel.add(lblFirstName);
-        panel.add(txtFirstName);
+        panel.add(txtFirstName, "wrap, pushx, growx"); //pushx pomera horizontalno celiju, growx da se poveca txt
         panel.add(lblLastName);
-        panel.add(txtLastName);
-        panel.add(btnCreate);
-        panel.add(btnDelete);
+        panel.add(txtLastName, "wrap, pushx, growx");
+        panel.add(btnCreate, "skip, split2"); // skip, pomeramo komponentu u sledecu celiju(kolonu), sa split podelimo trenutnu celiju na 2 dela 
+        panel.add(btnDelete,"wrap");
+        panel.add(lblDsc,"top");
+        panel.add(new JScrollPane(txtArea),"push, grow");
         
         frame.add(panel);
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);

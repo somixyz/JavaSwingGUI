@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package layout;
 
 import java.awt.Dimension;
@@ -19,6 +18,7 @@ import javax.swing.SwingUtilities;
  * @author Milos Dragovic
  */
 public class BoxLayoutt {
+
     JFrame frame = new JFrame("BOX LAYOUT");
     JPanel panel = new JPanel();
     JButton btnOne = new JButton("PRVI");
@@ -36,10 +36,8 @@ public class BoxLayoutt {
         frame.pack();
         frame.setVisible(true);
     }
-    
-    
-    
- public static void main(String[] args) {
+
+    public static void main(String[] args) {
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
