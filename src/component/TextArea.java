@@ -3,30 +3,26 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package javagui;
+package component;
 
-import java.awt.Font;
 import javax.swing.JFrame;
-import javax.swing.JTextField;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
 import javax.swing.SwingUtilities;
 
 /**
  *
  * @author Milos Dragovic
  */
-public class TextField {
+public class TextArea {
 
-    JFrame frame = new JFrame("JTEXT ");
-    JTextField textField = new JTextField("Pozdrav");
+    JFrame frame = new JFrame("JTEXTAREA");
+    JTextArea textArea = new JTextArea("Pozdrav", 10, 30);
+    JScrollPane scrollPane = new JScrollPane(textArea);
 
-    public TextField() {
-        textField.setFont(new Font("Verdana", Font.PLAIN, 18));
-//        textField.setEditable(false);
-//        textField.setEnabled(false);
-        textField.setText("Novi tekst");
-        String s = textField.getText();
-        frame.setTitle(s);
-        frame.add(textField);
+    public TextArea() {
+        textArea.append("SVIMA");
+        frame.add(scrollPane);
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
         frame.setVisible(true);
@@ -36,9 +32,9 @@ public class TextField {
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
-            new TextField();
+                new TextArea();
             }
-            
+
         });
     }
 }

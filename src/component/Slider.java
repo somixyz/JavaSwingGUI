@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package javagui;
+package component;
 
 import java.awt.BorderLayout;
 import java.awt.Color;

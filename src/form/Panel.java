@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package javagui;
+package form;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;

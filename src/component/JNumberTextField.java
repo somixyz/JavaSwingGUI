@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package javagui;
+package component;
 
 import javax.swing.JTextField;
 import javax.swing.text.AttributeSet;

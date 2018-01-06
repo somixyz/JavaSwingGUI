@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package javagui;
+package form;
 
 import javax.swing.JDesktopPane;
 import javax.swing.JFrame;
